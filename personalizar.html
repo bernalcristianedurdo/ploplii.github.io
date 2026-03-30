@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personaliza tu amigurumi en Plopii y envia tu pedido por WhatsApp." />
+  <title>Personalizar | Plopii</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="personalizar">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo_Plopi.jpeg" alt="Logo de Plopii" class="logo" />
+        <div>
+          <p class="brand-name">Plopii</p>
+          <p class="brand-tag">Crochet con personalidad</p>
+        </div>
+      </a>
+
+      <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">Menu</button>
+
+      <nav class="main-nav" aria-label="Navegacion principal">
+        <a data-nav="inicio" href="index.html">Inicio</a>
+        <a data-nav="catalogo" href="catalogo.html">Catalogo</a>
+        <a data-nav="personalizar" href="personalizar.html">Personalizar</a>
+        <a data-nav="contacto" href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="subhero">
+      <div class="container">
+        <p class="eyebrow">Personalizacion</p>
+        <h1>Diseña tu muñeco ideal</h1>
+        <p class="lead">Si, es totalmente posible tener una pagina para personalizar tu amigurumi. Aqui tus clientes pueden definir estilo, tamaño y accesorios antes de enviar el pedido.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container custom-grid">
+        <form id="customForm" class="custom-form">
+          <label>
+            Nombre del diseño
+            <input type="text" name="nombre" placeholder="Ej: Muñeco de graduacion" required />
+          </label>
+
+          <label>
+            Tamaño
+            <select name="tamano" required>
+              <option value="Pequeño (15 cm)" data-price="70000">Pequeño (15 cm) - $70.000</option>
+              <option value="Mediano (25 cm)" data-price="100000" selected>Mediano (25 cm) - $100.000</option>
+              <option value="Grande (35 cm)" data-price="135000">Grande (35 cm) - $135.000</option>
+            </select>
+          </label>
+
+          <label>
+            Colores principales
+            <input type="text" name="colores" placeholder="Ej: Beige, azul y blanco" required />
+          </label>
+
+          <label>
+            Estilo
+            <select name="estilo" required>
+              <option>Persona real</option>
+              <option>Mascota</option>
+              <option>Personaje animado</option>
+              <option>Idea original</option>
+            </select>
+          </label>
+
+          <fieldset>
+            <legend>Extras (+$12.000 c/u)</legend>
+            <label class="check"><input type="checkbox" name="extras" value="Accesorio adicional" /> Accesorio adicional</label>
+            <label class="check"><input type="checkbox" name="extras" value="Caja de regalo" /> Caja de regalo</label>
+            <label class="check"><input type="checkbox" name="extras" value="Tarjeta personalizada" /> Tarjeta personalizada</label>
+          </fieldset>
+
+          <label>
+            Comentarios
+            <textarea name="comentarios" rows="4" placeholder="Cuéntanos detalles importantes del diseño"></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+        </form>
+
+        <aside class="summary" id="summaryBox">
+          <p class="eyebrow">Resumen en vivo</p>
+          <h2>Tu pedido</h2>
+          <ul id="summaryList"></ul>
+          <p class="estimate">Estimado: <strong id="priceEstimate">$100.000 COP</strong></p>
+          <p class="hint">El valor final puede ajustarse segun complejidad y tiempos de entrega.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="brand-name">Plopii</p>
+        <p>Amigurumis personalizados hechos en Colombia.</p>
+      </div>
+      <div>
+        <p class="footer-title">Navegacion</p>
+        <a href="catalogo.html">Catalogo</a>
+        <a href="personalizar.html">Personalizar</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div>
+        <p class="footer-title">Contacto</p>
+        <p>Santa Rosa de Cabal, Risaralda</p>
+        <a href="https://wa.me/57TU_NUMERO?text=Hola,%20quiero%20informacion%20de%20Plopii" target="_blank" rel="noreferrer">WhatsApp</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Plopii. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
